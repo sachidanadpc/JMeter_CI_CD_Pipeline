@@ -64,3 +64,64 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+--------------------------------------------------------------------------------
+
+**Sequence of Running Shell Scripts:**
+
+**Install Docker:
+**
+Script: install_docker.sh
+Steps:
+Execute install_docker.sh script to install Docker on your system.
+Additional Information:
+Docker is required for building and running Docker containers, which will be used for setting up JMeter and other components.
+
+**Create JMeter Docker Image:**
+**Script: build_jmeter_docker_image.sh**
+Steps:
+Execute build_jmeter_docker_image.sh script to build a Docker image for JMeter.
+Additional Information:
+This script builds a Docker image containing the necessary JMeter setup.
+
+**Setup Kubernetes:**
+**Script: setup_kubernetes.sh**
+Steps:
+Execute setup_kubernetes.sh script to set up Kubernetes on your system.
+Additional Information:
+Kubernetes is required for orchestrating and managing containers in a distributed environment.
+
+**Deploy InfluxDB and Grafana Kubernetes Cluster:**
+**Script: deploy_monitoring_stack.sh**
+Steps:
+Execute deploy_monitoring_stack.sh script to deploy InfluxDB and Grafana on Kubernetes cluster.
+Additional Information:
+InfluxDB and Grafana are used for live monitoring of JMeter test results.
+
+**Setup Jenkins and Pipeline:**
+**Script: install_jenkins.sh**
+Steps:
+Execute install_jenkins.sh script to install Jenkins on your system.
+Additional Information:
+Jenkins will be used to automate CI/CD tasks and integrate with Git repository for triggering builds.
+
+**Run JMeter Tests (Non-Distributed Mode):**
+**Script: run_jmeter_tests.sh**
+Steps:
+Place your JMeter test script(s) in the test_scripts/ directory.
+Execute run_jmeter_tests.sh script by passing the path to your JMeter test script as an argument.
+Additional Information:
+This script runs JMeter tests in non-distributed mode and generates HTML reports.
+
+**Run JMeter Tests (Distributed Mode):**
+**Script: run_jmeter_distributed_tests.sh**
+Steps:
+Place your JMeter test script(s) in the test_scripts/ directory.
+Execute run_jmeter_distributed_tests.sh script by passing the path to your JMeter test script as an argument.
+Additional Information:
+This script sets up a JMeter master and slave(s) in Docker containers and executes tests in distributed mode.
+Additional Notes:
+Ensure that you have necessary permissions to execute the shell scripts (chmod +x script_name.sh).
+Make sure to adjust any paths or configurations in the scripts according to your environment and requirements.
+Review the output of each script for any errors or warnings during execution.
+Test your CI/CD pipeline thoroughly to ensure that all components are set up correctly and tests are executed successfully.
