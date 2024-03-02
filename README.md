@@ -69,58 +69,58 @@ This project is licensed under the [MIT License](LICENSE).
 
 **Sequence of Running Shell Scripts:**
 
-**Install Docker:**
-**Script: install_docker.sh**
+**Install Docker:** <br />
+**Script: install_docker.sh** <br />
 Steps: <br />
 Execute install_docker.sh script to install Docker on your system. <br />
 Additional Information: <br />
 Docker is required for building and running Docker containers, which will be used for setting up JMeter and other components. <br />
 
-**Create JMeter Docker Image:**
-**Script: build_jmeter_docker_image.sh**
-Steps:
-Execute build_jmeter_docker_image.sh script to build a Docker image for JMeter.
-Additional Information:
-This script builds a Docker image containing the necessary JMeter setup.
+**Create JMeter Docker Image:** <br />
+**Script: build_jmeter_docker_image.sh** <br />
+Steps: <br />
+Execute build_jmeter_docker_image.sh script to build a Docker image for JMeter. <br />
+Additional Information: <br />
+This script builds a Docker image containing the necessary JMeter setup. <br />
 
-**Setup Kubernetes:**
-**Script: setup_kubernetes.sh**
-Steps:
-Execute setup_kubernetes.sh script to set up Kubernetes on your system.
-Additional Information:
-Kubernetes is required for orchestrating and managing containers in a distributed environment.
+**Setup Kubernetes:** <br />
+**Script: setup_kubernetes.sh** <br />
+Steps: <br />
+Execute setup_kubernetes.sh script to set up Kubernetes on your system. <br />
+Additional Information: <br />
+Kubernetes is required for orchestrating and managing containers in a distributed environment. <br />
 
-**Deploy InfluxDB and Grafana Kubernetes Cluster:**
-**Script: deploy_monitoring_stack.sh**
-Steps:
-Execute deploy_monitoring_stack.sh script to deploy InfluxDB and Grafana on Kubernetes cluster.
-Additional Information:
-InfluxDB and Grafana are used for live monitoring of JMeter test results.
+**Deploy InfluxDB and Grafana Kubernetes Cluster:** <br />
+**Script: deploy_monitoring_stack.sh** <br />
+Steps: <br />
+Execute deploy_monitoring_stack.sh script to deploy InfluxDB and Grafana on Kubernetes cluster. <br />
+Additional Information: <br />
+InfluxDB and Grafana are used for live monitoring of JMeter test results. <br />
 
-**Setup Jenkins and Pipeline:**
-**Script: install_jenkins.sh**
-Steps:
-Execute install_jenkins.sh script to install Jenkins on your system.
-Additional Information:
+**Setup Jenkins and Pipeline:** <br />
+**Script: install_jenkins.sh** <br />
+Steps: <br />
+Execute install_jenkins.sh script to install Jenkins on your system. <br />
+Additional Information: <br />
 Jenkins will be used to automate CI/CD tasks and integrate with Git repository for triggering builds.
 
-**Run JMeter Tests (Non-Distributed Mode):**
-**Script: run_jmeter_tests.sh**
-Steps:
-Place your JMeter test script(s) in the test_scripts/ directory.
-Execute run_jmeter_tests.sh script by passing the path to your JMeter test script as an argument.
-Additional Information:
-This script runs JMeter tests in non-distributed mode and generates HTML reports.
+**Run JMeter Tests (Non-Distributed Mode):** <br />
+**Script: run_jmeter_tests.sh** <br />
+Steps: <br />
+Place your JMeter test script(s) in the test_scripts/ directory. <br />
+Execute run_jmeter_tests.sh script by passing the path to your JMeter test script as an argument. <br />
+Additional Information: <br />
+This script runs JMeter tests in non-distributed mode and generates HTML reports. <br />
 
-**Run JMeter Tests (Distributed Mode):**
-**Script: run_jmeter_distributed_tests.sh**
-Steps:
-Place your JMeter test script(s) in the test_scripts/ directory.
-Execute run_jmeter_distributed_tests.sh script by passing the path to your JMeter test script as an argument.
-Additional Information:
-This script sets up a JMeter master and slave(s) in Docker containers and executes tests in distributed mode.
-Additional Notes:
-Ensure that you have necessary permissions to execute the shell scripts (chmod +x script_name.sh).
-Make sure to adjust any paths or configurations in the scripts according to your environment and requirements.
-Review the output of each script for any errors or warnings during execution.
-Test your CI/CD pipeline thoroughly to ensure that all components are set up correctly and tests are executed successfully.
+**Run JMeter Tests (Distributed Mode):** <br />
+**Script: run_jmeter_distributed_tests.sh** <br />
+Steps: <br />
+Place your JMeter test script(s) in the test_scripts/ directory. <br />
+Execute run_jmeter_distributed_tests.sh script by passing the path to your JMeter test script as an argument. <br />
+Additional Information: <br />
+This script sets up a JMeter master and slave(s) in Docker containers and executes tests in distributed mode. <br />
+Additional Notes: <br />
+Ensure that you have necessary permissions to execute the shell scripts (chmod +x script_name.sh). <br />
+Make sure to adjust any paths or configurations in the scripts according to your environment and requirements. <br />
+Review the output of each script for any errors or warnings during execution. <br />
+Test your CI/CD pipeline thoroughly to ensure that all components are set up correctly and tests are executed successfully. <br />
