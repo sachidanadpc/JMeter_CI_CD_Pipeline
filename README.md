@@ -67,7 +67,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 --------------------------------------------------------------------------------
 
-##**Sequence of Running Shell Scripts:**
+## **Sequence of Running Shell Scripts:**
 
 **Install Docker:** <br />
 **Script: install_docker.sh** <br />
