@@ -69,10 +69,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 **Sequence of Running Shell Scripts:**
 
-**Install Docker:
-**
-Script: install_docker.sh
-Steps:
+**Install Docker:**
+**Script: install_docker.sh**
+/nSteps:
 Execute install_docker.sh script to install Docker on your system.
 Additional Information:
 Docker is required for building and running Docker containers, which will be used for setting up JMeter and other components.
