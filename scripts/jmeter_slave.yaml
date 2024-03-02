@@ -1,0 +1,21 @@
+# jmeter-slave.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jmeter-slave
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jmeter-slave
+  template:
+    metadata:
+      labels:
+        app: jmeter-slave
+    spec:
+      containers:
+      - name: jmeter-slave
+        image: jmeter
+        command: ["./bin/jmeter-server"]
+        ports:
+        - containerPort: 1099
