@@ -16,24 +16,7 @@ This repository contains shell scripts for setting up a Continuous Integration/C
 
 ## Repository Structure
 
-JMeter_CI_CD_Pipeline/
-│
-├── scripts/
-│ ├── install_docker.sh
-│ ├── build_jmeter_docker_image.sh
-│ ├── setup_kubernetes.sh
-│ ├── deploy_monitoring_stack.sh
-│ ├── jmeter_master.yaml
-│ ├── jmeter_slave.yaml
-│ ├── install_jenkins.sh
-│ ├── run_jmeter_tests.sh
-│ └── run_jmeter_distributed_tests.sh
-│
-├── test_scripts/
-│ └── my_test_script.jmx
-│
-├── README.md
-└── .gitignore
+![image](https://github.com/sachidanadpc/JMeter_CI_CD_Pipeline/assets/49983832/f9b0dda7-7c93-4ad3-93c5-7b905c00e7ad)
 
 --------------------------------------------------------------------------------
 
