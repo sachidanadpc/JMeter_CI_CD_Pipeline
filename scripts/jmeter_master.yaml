@@ -1,0 +1,21 @@
+# jmeter-master.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jmeter-master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jmeter-master
+  template:
+    metadata:
+      labels:
+        app: jmeter-master
+    spec:
+      containers:
+      - name: jmeter-master
+        image: jmeter
+        command: ["./bin/jmeter-server"]
+        ports:
+        - containerPort: 1099
