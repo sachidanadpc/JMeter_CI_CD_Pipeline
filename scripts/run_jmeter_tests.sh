@@ -13,7 +13,7 @@ TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 docker run --rm -v $(pwd)/reports:/reports -v $(pwd)/$1:/$1 justb4/jmeter -n -t /$1 -l /reports/test_results_${TIMESTAMP}.jtl -e
 
 # Set read permission on test results file
-chmod +r /path/to/test_results_${TIMESTAMP}.jtl
+chmod +r /reports/test_results_${TIMESTAMP}.jtl
 
 # Generate HTML report index.html
 docker run --rm -v $(pwd)/reports:/reports justb4/jmeter -g /reports/test_results_${TIMESTAMP}.jtl -o /reports/html_report
