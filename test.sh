@@ -11,9 +11,12 @@ export TARGET_PATH="/kaarten.html"
 export TARGET_KEYWORD="Kaartdiensten"
 
 T_DIR=test_scripts
+T_SCRIPT=test-plan.jmx
+T_SCRJTL=test-plan.jtl
+T_TIME=`date '+%Y%m%d%H%M%S'`
 
 # Reporting dir: start fresh
-R_DIR=${T_DIR}/report
+R_DIR=${T_DIR}/report/Rpt_${T_TIME}
 rm -rf ${R_DIR} > /dev/null 2>&1
 mkdir -p ${R_DIR}
 
@@ -22,7 +25,7 @@ mkdir -p ${R_DIR}
 ./run.sh -Dlog_level.jmeter=DEBUG \
 	-JTARGET_HOST=${TARGET_HOST} -JTARGET_PORT=${TARGET_PORT} \
 	-JTARGET_PATH=${TARGET_PATH} -JTARGET_KEYWORD=${TARGET_KEYWORD} \
-	-n -t ${T_DIR}/test-plan.jmx -l ${T_DIR}/test-plan.jtl -j ${T_DIR}/jmeter.log \
+	-n -t ${T_DIR}/${T_SCRIPT} -l ${T_DIR}/${T_SCRJTL} -j ${T_DIR}/jmeter.log \
 	-e -o ${R_DIR}
 
 echo "==== jmeter.log ===="
